@@ -13,8 +13,8 @@ const config = {
     v4: true,
   },
 
-  url: isProduction ? 'https://c7n-ops.github.io' : 'http://localhost:5000',
-  baseUrl: isProduction ? '/ADG/' : '/',
+  url: isProduction ? 'https://agenticdevopshq.com' : 'https://c7n-ops.github.io',
+  baseUrl: isProduction ? '/' : '/ADG/',
 
   organizationName: 'C7N-Ops',
   projectName: 'ADG',
