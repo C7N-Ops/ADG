@@ -1,7 +1,7 @@
 ---
 slug: welcome-to-adg
 title: Welcome to Agentic DevOps HQ
-authors: [adg-team]
+authors: [c7n-cyber]
 tags: [adg, announcement]
 ---
 

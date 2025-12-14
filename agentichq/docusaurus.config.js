@@ -85,6 +85,7 @@ const config = {
             label: 'Framework',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/contributors', label: 'Contributors', position: 'left'},
           {
             href: 'https://github.com/C7N-Ops/ADG',
             label: 'GitHub',
@@ -115,6 +116,10 @@ const config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'Contributors',
+                to: '/contributors',
+              },
               {
                 label: 'GitHub Discussions',
                 href: 'https://github.com/C7N-Ops/ADG/discussions',
