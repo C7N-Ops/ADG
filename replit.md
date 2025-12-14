@@ -41,8 +41,9 @@ agentichq/
 
 ### Site Settings (docusaurus.config.js)
 - **URL**: https://agenticdevopshq.com
-- **Organization**: AgenticDevOpsHQ
-- **Project**: agenticdevopshq.github.io
+- **Organization**: C7N-Ops
+- **Project**: ADG
+- **Repository**: https://github.com/C7N-Ops/ADG
 
 ### Navigation Structure
 - **Concepts**: Introduction to ADG principles and philosophy
@@ -69,9 +70,9 @@ npm run build
 The site is configured for automatic deployment via GitHub Actions when pushed to the `main` branch. See `.github/workflows/deploy.yml`.
 
 ## GitHub Pages Setup Instructions
-1. Create a GitHub repository named `agenticdevopshq.github.io`
-2. Push this codebase to the repository
-3. Go to Settings > Pages and enable GitHub Pages from GitHub Actions
+1. Push the contents of the `agentichq` folder to https://github.com/C7N-Ops/ADG
+2. Go to Settings > Pages and enable GitHub Pages from GitHub Actions
+3. Configure custom domain `agenticdevopshq.com` in Pages settings
 4. The site will automatically deploy on push to main
 
 ## Branding

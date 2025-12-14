@@ -14,8 +14,8 @@ const config = {
   url: 'https://agenticdevopshq.com',
   baseUrl: '/',
 
-  organizationName: 'AgenticDevOpsHQ',
-  projectName: 'agenticdevopshq.github.io',
+  organizationName: 'C7N-Ops',
+  projectName: 'ADG',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -32,7 +32,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/AgenticDevOpsHQ/agenticdevopshq.github.io/tree/main/',
+          editUrl: 'https://github.com/C7N-Ops/ADG/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -40,7 +40,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/AgenticDevOpsHQ/agenticdevopshq.github.io/tree/main/',
+          editUrl: 'https://github.com/C7N-Ops/ADG/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -86,7 +86,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/AgenticDevOpsHQ',
+            href: 'https://github.com/C7N-Ops/ADG',
             label: 'GitHub',
             position: 'right',
           },
@@ -117,7 +117,7 @@ const config = {
             items: [
               {
                 label: 'GitHub Discussions',
-                href: 'https://github.com/AgenticDevOpsHQ/agenticdevopshq.github.io/discussions',
+                href: 'https://github.com/C7N-Ops/ADG/discussions',
               },
             ],
           },
@@ -130,7 +130,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/AgenticDevOpsHQ',
+                href: 'https://github.com/C7N-Ops/ADG',
               },
             ],
           },
