@@ -5,36 +5,40 @@ const sidebars = {
   conceptsSidebar: [
     {
       type: 'category',
-      label: 'ADG Concepts',
+      label: 'Concepts',
+      collapsed: false,
       items: [
-        'concepts/introduction',
+        'concepts/index',
+        'concepts/definitions-agentic-development',
         'concepts/what-is-adg',
-        'concepts/core-principles',
-        'concepts/benefits',
+        'concepts/adg-vs-ai-governance',
+        'concepts/failure-modes-drift-taxonomy',
+        'concepts/case-studies-hub',
       ],
     },
   ],
+
   standardsSidebar: [
     {
       type: 'category',
-      label: 'ADG Standards',
+      label: 'Standards',
+      collapsed: false,
       items: [
-        'standards/overview',
-        'standards/agent-behavior',
-        'standards/human-oversight',
-        'standards/audit-compliance',
+        'standards/index',
+        'standards/standards-index',
       ],
     },
   ],
+
   frameworkSidebar: [
     {
       type: 'category',
-      label: 'ADG Framework',
+      label: 'Framework',
+      collapsed: false,
       items: [
-        'framework/getting-started',
-        'framework/implementation',
-        'framework/best-practices',
-        'framework/tooling',
+        'framework/index',
+        'framework/implementation-quickstart',
+        'framework/governance-controls-checklist',
       ],
     },
   ],
