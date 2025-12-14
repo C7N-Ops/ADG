@@ -5,7 +5,7 @@ This is the documentation site for **Agentic Development Governance (ADG)** - ho
 
 ## Project Structure
 ```
-agentichq/
+/
 ├── blog/                    # Blog posts
 │   ├── authors.yml          # Blog author definitions
 │   ├── tags.yml             # Blog tag definitions
@@ -29,7 +29,7 @@ agentichq/
 ├── src/
 │   ├── components/          # React components
 │   ├── css/                 # Custom CSS styles
-│   └── pages/               # Custom pages (homepage)
+│   └── pages/               # Custom pages (homepage, contributors)
 ├── static/                  # Static assets (images, favicon)
 ├── .github/workflows/       # GitHub Actions for deployment
 ├── docusaurus.config.js     # Main Docusaurus configuration
@@ -50,19 +50,18 @@ agentichq/
 - **Standards**: Formal specifications for governance implementation
 - **Framework**: Practical implementation guidance
 - **Blog**: Articles and updates about ADG
+- **Contributors**: Team members and contribution info
 
 ## Development
 
 ### Running locally
 ```bash
-cd agentichq
 npm start
 ```
 The dev server runs on port 5000.
 
 ### Building for production
 ```bash
-cd agentichq
 npm run build
 ```
 
@@ -70,7 +69,7 @@ npm run build
 The site is configured for automatic deployment via GitHub Actions when pushed to the `main` branch. See `.github/workflows/deploy.yml`.
 
 ## GitHub Pages Setup Instructions
-1. Push the contents of the `agentichq` folder to https://github.com/C7N-Ops/ADG
+1. Push repo to https://github.com/C7N-Ops/ADG
 2. Go to Settings > Pages and enable GitHub Pages from GitHub Actions
 3. Configure custom domain `agenticdevopshq.com` in Pages settings
 4. The site will automatically deploy on push to main
