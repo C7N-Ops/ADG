@@ -4,46 +4,46 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'ADG Concepts',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Understand the principles and philosophy behind Agentic Development
+        Governance. Learn why governance matters in the age of autonomous AI agents.
       </>
     ),
+    link: '/docs/concepts/introduction',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'ADG Standards',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Formal specifications for implementing governance. Define agent behaviors,
+        oversight requirements, and compliance frameworks.
       </>
     ),
+    link: '/docs/standards/overview',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'ADG Framework',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Practical guidance for implementation. Get started quickly with best
+        practices, tooling recommendations, and step-by-step guides.
       </>
     ),
+    link: '/docs/framework/getting-started',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description, link}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        <a href={link} className="button button--primary button--sm">
+          Learn More
+        </a>
       </div>
     </div>
   );

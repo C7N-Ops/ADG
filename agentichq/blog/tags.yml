@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+adg:
+  label: ADG
+  description: Posts about Agentic Development Governance
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+governance:
+  label: Governance
+  description: Posts about AI agent governance
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+standards:
+  label: Standards
+  description: Posts about ADG standards
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+framework:
+  label: Framework
+  description: Posts about the ADG framework
+
+announcement:
+  label: Announcement
+  description: Official announcements
