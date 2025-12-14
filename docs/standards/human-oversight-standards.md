@@ -1,113 +1,98 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Human Oversight Standards
 
 These standards define requirements for human oversight of autonomous development agents.
 
-## Philosophy
+## Principle
 
-Human oversight in ADG is based on the principle that **humans remain ultimately accountable** for agent actions. Oversight mechanisms ensure humans can:
+Humans remain ultimately accountable for agent actions. Oversight mechanisms MUST ensure humans can:
+- understand what agents are doing
+- intervene when necessary
+- maintain meaningful control
+- learn from agent behavior
 
-- Understand what agents are doing
-- Intervene when necessary
-- Maintain meaningful control
-- Learn from agent behavior
+## Oversight levels (normative model)
 
-## Oversight Levels
+Organizations MUST define and use an oversight model. The following levels are RECOMMENDED:
 
 ### Level 0: Autonomous
 Agent operates independently within defined boundaries.
-- Suitable for: Low-risk, reversible actions
-- Example: Code formatting, documentation updates
 
 ### Level 1: Notify
 Agent acts autonomously but notifies humans of actions.
-- Suitable for: Moderate-risk, monitored actions
-- Example: Dependency updates, test modifications
 
-### Level 2: Approval Required
+### Level 2: Approval required
 Agent proposes actions and waits for human approval.
-- Suitable for: Higher-risk actions requiring judgment
-- Example: API changes, database migrations
 
 ### Level 3: Supervised
-Human actively monitors agent during action execution.
-- Suitable for: Critical or irreversible actions
-- Example: Production deployments, security changes
+Human actively monitors the agent during execution.
 
-### Level 4: Human-Executed
-Agent provides recommendations; human executes.
-- Suitable for: Highest-risk actions
-- Example: Data deletion, access control changes
+### Level 4: Human-executed
+Agent provides recommendations; a human executes.
 
-## Oversight Requirements
+> Note: Examples and operating guidance for applying these levels belong in **/docs/framework/**.
 
-### HOR-001: Checkpoint Definition
+## Oversight requirements (HOR)
 
-**Organizations must define oversight checkpoints for agent workflows.**
+### HOR-001: Checkpoint definition
 
-Requirements:
-- Document all checkpoints in governance policies
-- Specify oversight level for each checkpoint
-- Define escalation criteria
-- Review checkpoints periodically
+Organizations MUST define oversight checkpoints for agent workflows.
 
-### HOR-002: Approval Workflows
+Checkpoint definitions MUST include:
+- checkpoint name and purpose
+- which workflows/actions the checkpoint applies to
+- required oversight level at the checkpoint
+- escalation criteria
 
-**Human approvals must be captured and recorded.**
+Checkpoint definitions MUST be reviewed periodically (at an organization-defined cadence).
 
-Requirements:
-- Identity of approver
-- Timestamp of approval
-- Scope of approval
-- Any conditions or limitations
+### HOR-002: Risk classification mapping
 
-### HOR-003: Override Mechanisms
+Organizations MUST define a risk classification method and map classifications to oversight levels.
 
-**Humans must be able to override agent decisions.**
+The classification method MUST consider:
+- reversibility
+- blast radius
+- access boundary impact (auth/tenancy/data access)
+- schema/migration impact
+- production impact
 
-Requirements:
-- Clear override procedures
-- Override logging and justification
-- Post-override review process
-- Override metrics tracking
+### HOR-003: Approval capture
 
-### HOR-004: Emergency Controls
+When approvals are required, approval records MUST include:
+- identity of approver
+- timestamp of approval
+- scope of approval
+- conditions or limitations, if any
 
-**Emergency stop capabilities must be available.**
+### HOR-004: Override mechanisms
 
-Requirements:
-- Kill switch accessibility
-- Defined emergency procedures
-- Recovery processes
-- Post-emergency analysis
+Humans MUST be able to override agent decisions.
 
-## Implementation Guidelines
+Override capability MUST include:
+- a documented procedure
+- override logging with justification
+- post-override review requirement
 
-### Balancing Oversight and Efficiency
+### HOR-005: Emergency stop
 
-Consider these factors when setting oversight levels:
-- Risk of the action
-- Reversibility
-- Blast radius
-- Regulatory requirements
-- Organizational risk tolerance
+Emergency stop capability MUST be available for governed agents.
 
-### Avoiding Oversight Fatigue
+Emergency stop procedures MUST include:
+- accessibility (who can trigger, under what conditions)
+- recovery steps
+- post-emergency analysis requirement
 
-Too much oversight can lead to:
-- Rubber-stamping approvals
-- Delayed workflows
-- Developer frustration
+## Evidence expectations
 
-Mitigate by:
-- Right-sizing oversight to risk
-- Automating low-risk decisions
-- Providing context for approvers
-- Measuring and optimizing approval times
+To demonstrate conformance, an organization MUST be able to produce:
+- the checkpoint register (HOR-001)
+- the risk classification → oversight mapping (HOR-002)
+- approval and override logs (HOR-003, HOR-004)
+- emergency stop procedure and activation records, when invoked (HOR-005)
 
-## Next Steps
-
-Explore [Audit & Compliance Standards](/docs/standards/audit-compliance-standards).
+Operating guidance lives in:
+- **/docs/framework/oversight-operating-model**

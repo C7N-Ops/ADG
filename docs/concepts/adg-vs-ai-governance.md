@@ -23,7 +23,7 @@ This is important—especially for AI systems making decisions about people.
 ADG focuses on the **engineering and operational reality** of building software with agents:
 
 - codebase coherence under autonomous change
-- architectural enforcement
+- architectural intent preservation
 - tenancy and access boundary enforcement (e.g., RLS, permissions)
 - documentation synchronization as a governance primitive
 - environment isolation and deployment safety

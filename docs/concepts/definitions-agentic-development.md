@@ -6,6 +6,9 @@ sidebar_position: 3
 
 This page is the **single source of truth** for ADG terminology. Other pages should link here rather than restating definitions.
 
+> Note: These definitions explain WHAT terms mean in ADG.
+> They are not requirements or controls (those belong in **/docs/standards/**).
+
 ## Agentic Coding
 
 **Agentic coding** is a development workflow where a human directs an AI agent to make code changes (often across multiple files and layers) and the agent executes those changes autonomously.

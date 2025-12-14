@@ -6,28 +6,31 @@ sidebar_position: 2
 
 Agentic Development Governance (ADG) is a systematic approach to governing **autonomous or semi-autonomous AI agents** that participate in software development activities.
 
-## Definition
+## Canonical definition
 
-**Agentic Development Governance (ADG)** encompasses the policies, processes, standards, and tooling that organizations use to:
+The formal definition of ADG and related terms lives in **[Canonical Definitions](/docs/concepts/definitions-agentic-development)**.
 
-- define what development agents **can** and **cannot** do
-- monitor agent activity **in real time**
-- audit and reconstruct agent decisions **after the fact**
-- enforce guardrails at critical boundaries (auth, data access, tenancy, environments)
-- preserve architectural intent and documentation truth over time
+This page explains the **problem framing**: why ADG exists and what it is trying to prevent.
 
-ADG exists because the **volume and velocity** of agent-generated changes can exceed human review capacity—especially when agents modify **schema, migrations, infra, CI/CD, and security controls**.
+## What ADG focuses on
+
+ADG focuses on the **engineering and operational reality** of building software with agents:
+
+- preserving **coherence** under autonomous change (code, schema, infra, docs)
+- enforcing boundaries (auth, data access, tenancy, environments)
+- ensuring **auditability** and **replayability** of agent actions
+- preventing drift that can “work today” while becoming brittle or unsafe over time
 
 ## What ADG is (and is not)
 
 ### ADG is
-- a governance layer for **agentic coding and agentic DevOps**
-- a set of enforceable rules and verification gates
-- a discipline for maintaining **coherence** under autonomous change
-- an approach to preventing “works today / breaks later” failures
+- a governance layer for **agentic coding** and **agentic DevOps**
+- a discipline for maintaining **architectural intent** under high-velocity change
+- an approach to preventing “works now / breaks later” failures
 
 ### ADG is not
 - a generic “AI ethics” program
+- model governance or data governance
 - a code assistant
 - a linter
 - a single CI check
@@ -37,27 +40,27 @@ ADG exists because the **volume and velocity** of agent-generated changes can ex
 
 For decades, software safety relied on a stable assumption:
 
-- humans wrote the code  
-- humans reviewed the code  
-- humans understood the code  
+- humans wrote the code
+- humans reviewed the code
+- humans understood the code
 
 Agentic development breaks that assumption:
 
 - agents can generate **massive surface area** quickly
 - the resulting system can “work” while hiding severe flaws:
   - tenancy leakage
-  - RLS bypass conditions
+  - authorization ambiguity
   - hidden coupling between environments
   - undocumented side effects
-  - schema drift and orphaned migrations
+  - schema drift and migration damage
   - contradictions between docs and runtime behavior
 
 ADG is the missing layer that makes agentic software **auditable, enforceable, and maintainable**.
 
 ## Core outcomes ADG targets
 
-- **Transparency:** every action is visible and explainable
-- **Accountability:** every action is attributable and reviewable
+- **Transparency:** actions are visible and explainable
+- **Accountability:** actions are attributable and reviewable
 - **Controllability:** humans can pause/stop/override agent actions
-- **Compliance:** policies are enforced at runtime and at merge/deploy gates
+- **Compliance:** policies are enforced at critical boundaries and gates
 - **Continuous improvement:** the system learns from incidents and near-misses

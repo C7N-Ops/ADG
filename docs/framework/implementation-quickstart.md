@@ -6,6 +6,8 @@ sidebar_position: 2
 
 If you’re starting from zero, do this in order.
 
+This guide explains **how to implement** ADG. Normative requirements live in **/docs/standards/**.
+
 ## Step 1 — Inventory agentic surface area
 
 List:
@@ -18,23 +20,24 @@ List:
 Output artifact:
 - `Agent Inventory` (agent name, scope, tools, permissions, environments)
 
-## Step 2 — Establish the Action Ledger (minimum audit trail)
+## Step 2 — Implement the Action Ledger (minimum audit trail)
 
-Your agent actions MUST emit structured logs (JSON preferred) with:
+To satisfy the audit and behavior standards (ABR/ACR), implement structured action logging (JSON preferred) with:
+
 - timestamp (UTC)
 - agent_id
 - session/correlation_id
 - action type
-- inputs/parameters
+- inputs/parameters (or stable references)
 - affected resources
 - outcome (success/failure)
 - duration
-- rationale (for significant actions)
-- user context (if agent acts “on behalf of” a human)
+- rationale for significant actions
+- user context (if the agent acts “on behalf of” a human)
 
 ## Step 3 — Define high-risk checkpoints
 
-Create a list of “approval required” actions:
+Create a list of “approval required” actions, such as:
 - schema migrations
 - auth/authz changes
 - RLS/tenancy logic changes
@@ -43,28 +46,30 @@ Create a list of “approval required” actions:
 - secrets access changes
 - permission/role changes
 
-Then enforce one rule:
-> agents may propose; humans approve.
+Operational rule of thumb:
+> agents propose; humans approve for high-risk changes.
 
 ## Step 4 — Enforce boundary invariants
 
-At minimum:
+Start with invariants that prevent catastrophic drift:
+
 - environment isolation (dev/staging/prod must not share resources)
-- tenancy isolation (RLS/tenant filters must be verified)
+- tenancy isolation (RLS/tenant filters verified)
 - auth consistency (no unguarded routes)
-- schema consistency (migrations verified, schema diff checks)
+- schema safety (migrations verified; schema drift checks)
 
 ## Step 5 — Add drift detection
 
-Start small:
-- docs-to-code sync check (docs referenced by PR changes)
-- schema drift detection in CI
-- “invariant tests” that fail on boundary violations
+Start small and expand:
 
-## Step 6 — Iterate into Level 2 / Level 3
+- docs-to-code sync checks
+- schema drift detection in CI
+- invariant tests that fail on boundary violations
+
+## Step 6 — Iterate toward higher assurance
 
 Once foundations work:
 - add anomaly detection and alerts
-- tighten policy engine
+- tighten policy checks at merge/deploy boundaries
 - improve dashboards and reporting
 - expand governed agent coverage

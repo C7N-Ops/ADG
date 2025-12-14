@@ -10,18 +10,14 @@ This section establishes the **definitions, mental models, and failure modes** t
 
 ## Start here
 
-1. **[What is ADG?](./what-is-adg.md)**
-2. **[Canonical Definitions](./definitions-agentic-development.md)**
-3. **[ADG vs “AI Governance”](./adg-vs-ai-governance.md)**
-4. **[Failure Modes & Drift Taxonomy](./failure-modes-drift-taxonomy.md)**
+1. **[What is ADG?](/docs/concepts/what-is-adg)**
+2. **[Canonical Definitions](/docs/concepts/definitions-agentic-development)**
+3. **[ADG vs “AI Governance”](/docs/concepts/adg-vs-ai-governance)**
+4. **[Failure Modes & Drift Taxonomy](/docs/concepts/failure-modes-drift-taxonomy)**
+5. **[Case Studies](/docs/concepts/case-studies)**
 
-## The ADG difference
+## Boundary of this section
 
-Most governance discussions focus on **ethics**, **model risk**, **policy**, and **compliance** at the *AI/model layer*.
+This section answers **WHAT and WHY**.
 
-ADG focuses on **software coherence** at the *engineering layer*:
-
-- preventing drift across code, schema, infra, and docs
-- enforcing access boundaries (multi-tenancy, RLS, env separation)
-- ensuring auditability of high-velocity agent output
-- maintaining architectural intent under autonomous change
+Implementation guidance (checklists, workflows, adoption playbooks) lives in **/docs/framework/**.

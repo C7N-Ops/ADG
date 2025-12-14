@@ -6,6 +6,8 @@ sidebar_position: 3
 
 Use this as a pragmatic implementation checklist.
 
+This checklist is not a standard; it is an operational companion to **/docs/standards/**.
+
 ## Identity & attribution
 - [ ] Agents have unique identities (agent_id)
 - [ ] Actions are traceable to a responsible party (human owner or team)
@@ -14,12 +16,13 @@ Use this as a pragmatic implementation checklist.
 ## Logging & audit trail
 - [ ] Action ledger captures required fields (timestamp, inputs, outputs, resources, rationale)
 - [ ] Logs are searchable and retained per policy
-- [ ] Log integrity is protected (at least access controls; ideally tamper-evident storage)
+- [ ] Log integrity is protected (access controls; higher assurance may require tamper-evidence)
 
 ## Oversight
 - [ ] High-risk checkpoints are defined
 - [ ] Approvals are recorded with approver identity + timestamp + scope
 - [ ] Overrides are possible and logged
+- [ ] Emergency stop procedure exists and is accessible
 
 ## Boundaries & invariants
 - [ ] Environment boundaries are enforced and tested

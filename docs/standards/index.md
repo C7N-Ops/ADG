@@ -4,19 +4,19 @@ sidebar_position: 1
 
 # Standards
 
-The ADG Standards define **what must be true** for governed agentic development.
+The ADG Standards define **what MUST be true** for governed agentic development.
 
-These are normative specifications. They use:
+These are normative specifications. Keywords are interpreted as:
 - **MUST** = required
 - **SHOULD** = strongly recommended
 - **MAY** = optional
 
 ## Standards map
 
-1. **[ADG Standards Index](./standards-index.md)**
-2. **[Behavior Standards](./agent-behavior-standards.md)**
-3. **[Human Oversight Standards](./human-oversight-standards.md)**
-4. **[Audit & Compliance Standards](./audit-compliance-standards.md)**
+1. **[ADG Standards Suite Index](/docs/standards/standards-index)**
+2. **[Agent Behavior Standards](/docs/standards/agent-behavior-standards)**
+3. **[Human Oversight Standards](/docs/standards/human-oversight-standards)**
+4. **[Audit & Compliance Standards](/docs/standards/audit-compliance-standards)**
 
 ## Compliance levels
 

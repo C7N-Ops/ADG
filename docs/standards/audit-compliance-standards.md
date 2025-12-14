@@ -1,131 +1,81 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Audit & Compliance Standards
 
-These standards define requirements for auditing agent activities and maintaining compliance with governance policies.
+These standards define requirements for auditing agent activities and demonstrating compliance with governance policies.
 
-## Audit Requirements
+## Audit requirements (ACR)
 
-### ACR-001: Comprehensive Logging
+### ACR-001: Comprehensive logging (org-retained)
 
-**All agent activities must be logged for audit purposes.**
+Organizations MUST retain logs for governed agent activity sufficient to reconstruct actions.
 
-Minimum log fields:
-- Timestamp (UTC, ISO 8601)
-- Agent identifier
-- Session/correlation ID
-- Action type
-- Input parameters
-- Output/result
-- Duration
-- User context (if applicable)
+Minimum retained fields MUST include:
+- timestamp (UTC, ISO 8601)
+- agent identifier
+- session/correlation identifier
+- action type
+- input parameters (or stable references)
+- output/result (or stable references)
+- duration
+- user/request context, when applicable
 
-### ACR-002: Log Retention
+### ACR-002: Retention
 
-**Logs must be retained according to organizational policy.**
+Organizations MUST define and enforce retention periods for agent logs.
 
-Minimum retention periods:
-- Standard actions: 90 days
-- Security-related: 1 year
-- Compliance-critical: 7 years or as required
+Retention periods MUST be:
+- risk-based and policy-defined
+- at least **90 days** for standard actions
+- at least **1 year** for security-relevant actions
+- at least **7 years** for compliance-critical actions, or longer if required by applicable obligations
 
-### ACR-003: Log Integrity
+### ACR-003: Integrity and access control
 
-**Log integrity must be protected.**
+Organizations MUST protect log integrity and restrict access.
 
-Requirements:
-- Immutable log storage
-- Tamper detection mechanisms
-- Access controls on log systems
-- Backup and recovery procedures
+Organizations MUST implement:
+- tamper-evident or immutable storage controls appropriate to risk
+- access controls on log systems
+- backup and recovery procedures
 
-### ACR-004: Audit Trail Completeness
+### ACR-004: Audit trail completeness
 
-**Audit trails must support reconstruction of agent activities.**
+Audit trails MUST support reconstruction of agent activity.
 
-Requirements:
-- Sufficient detail for action replay
-- Context preservation
-- Relationship tracking between actions
-- Decision rationale capture
+Audit trails MUST preserve:
+- sufficient detail for action replay (where feasible)
+- contextual linkage between related actions (correlation)
+- associated decision rationale when required by ABR-002
 
-## Compliance Framework
+## Compliance monitoring and reporting
 
-### Governance Policies
+### ACR-005: Policy monitoring
 
-Organizations must maintain:
-- Agent behavior policies
-- Access control policies
-- Oversight requirements
-- Incident response procedures
+Organizations MUST monitor for policy violations and MUST define:
+- what constitutes a violation
+- detection mechanisms (automated and/or manual)
+- escalation paths and response SLAs
 
-### Compliance Monitoring
+Organizations SHOULD implement real-time alerting for high-severity violations.
 
-Continuous compliance monitoring includes:
-- Automated policy violation detection
-- Real-time alerting
-- Compliance dashboards
-- Trend analysis
+### ACR-006: Reporting
 
-### Reporting Requirements
+Organizations MUST define a compliance reporting cadence and produce reports appropriate to their risk and obligations.
 
-#### Internal Reports
-- Daily compliance summaries
-- Weekly governance metrics
-- Monthly trend reports
-- Quarterly governance reviews
+Reports MUST be able to support:
+- internal governance review
+- incident review and corrective action tracking
+- external evidence packaging when required
 
-#### External Reports
-- Audit evidence packages
-- Compliance certifications
-- Incident reports
-- Regulatory submissions
+> Recommended cadences and operational templates belong in **/docs/framework/audit-operations**.
 
-## Audit Procedures
+## Out of scope
 
-### Regular Audits
+Formal “certification programs” are out of scope for the public ADG standards corpus.
 
-Conduct periodic audits to:
-- Verify policy compliance
-- Identify governance gaps
-- Validate control effectiveness
-- Recommend improvements
+## Next steps
 
-### Incident Audits
-
-When incidents occur:
-1. Preserve all relevant logs
-2. Reconstruct timeline of events
-3. Identify root cause
-4. Document findings
-5. Implement corrective actions
-
-### External Audits
-
-Support external auditors by:
-- Providing access to audit systems
-- Preparing evidence packages
-- Answering auditor queries
-- Implementing audit recommendations
-
-## Compliance Metrics
-
-Track these metrics:
-- Policy violation rate
-- Time to detect violations
-- Audit finding trends
-- Remediation time
-- Compliance score
-
-## Certification
-
-Organizations can pursue ADG certification to demonstrate:
-- Governance maturity
-- Standards compliance
-- Continuous improvement commitment
-
-## Next Steps
-
-Ready to implement? Start with the [ADG Framework](/docs/framework/).
+Ready to implement? Start with the **/docs/framework/** pillar.

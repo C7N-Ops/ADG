@@ -1,104 +1,116 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Agent Behavior Standards
 
-These standards define the expected behaviors of autonomous development agents operating under ADG governance.
+These standards define required behaviors for autonomous development agents operating under ADG governance.
 
 ## Scope
 
 These standards apply to all agents that:
-- Write, modify, or delete code
-- Access development infrastructure
-- Interact with external services
-- Make decisions affecting software systems
+- write, modify, or delete code
+- access development infrastructure
+- interact with external services
+- make decisions affecting software systems
 
-## Core Behavioral Requirements
+## Normative keywords
 
-### ABR-001: Action Logging
+The keywords **MUST**, **SHOULD**, and **MAY** are to be interpreted as described in **/docs/standards/**.
 
-**All agent actions must be logged with sufficient detail for audit and replay.**
+## Core behavioral requirements (ABR)
 
-Requirements:
-- Timestamp (ISO 8601 format, UTC)
-- Agent identifier
-- Action type and parameters
-- Affected resources
-- Outcome (success/failure)
-- Duration
+### ABR-001: Action logging (agent-emitted)
 
-### ABR-002: Decision Transparency
+Agents MUST emit logs for each action with sufficient detail for audit and replay.
 
-**Agents must provide rationale for significant decisions.**
+Minimum fields MUST include:
+- timestamp (UTC, ISO 8601)
+- agent identifier
+- action type
+- action parameters (or a stable reference to them)
+- affected resources
+- outcome (success/failure)
+- duration
 
-Requirements:
-- Decision context capture
-- Alternatives considered
-- Selection criteria
-- Confidence level (when applicable)
+### ABR-002: Decision transparency
 
-### ABR-003: Scope Boundaries
+For **significant decisions**, agents MUST record decision rationale.
 
-**Agents must operate within defined boundaries.**
+For purposes of this standard, “significant” includes decisions that:
+- change externally visible behavior
+- change schema/migrations
+- change access controls or security posture
+- change deployment/release behavior
+- introduce, remove, or upgrade dependencies
+- expand scope or permissions
 
-Requirements:
-- Respect resource access permissions
-- Honor rate limits and quotas
-- Stay within designated environments
-- Avoid out-of-scope actions
+Rationale MUST include:
+- decision context
+- selection criteria
+- alternatives considered (at least one, when applicable)
 
-### ABR-004: Error Handling
+Rationale SHOULD include:
+- uncertainty/assumptions when the agent is not confident
 
-**Agents must handle errors gracefully and safely.**
+### ABR-003: Scope boundaries
 
-Requirements:
-- Fail safely (no partial or corrupted states)
-- Log all errors with context
-- Escalate critical errors immediately
-- Implement retry with backoff for transient failures
+Agents MUST operate within defined boundaries.
 
-### ABR-005: Resource Management
+Agents MUST:
+- respect resource access permissions
+- stay within designated environments
+- avoid out-of-scope actions
 
-**Agents must use resources efficiently and responsibly.**
+Agents SHOULD:
+- enforce rate limits and quotas when interacting with shared services
 
-Requirements:
-- Clean up temporary resources
-- Respect resource quotas
-- Avoid resource exhaustion
-- Monitor and report resource usage
+### ABR-004: Error handling
 
-## Interaction Standards
+Agents MUST handle errors safely.
 
-### AIS-001: Human Communication
+Agents MUST:
+- fail safely (avoid partial or corrupted states where feasible)
+- log errors with context sufficient for triage
+- escalate critical errors according to the organization’s incident policy
 
-**Agents must communicate clearly with humans.**
+Agents SHOULD:
+- use retry with backoff only for transient failures
 
-Requirements:
-- Use clear, professional language
-- Provide sufficient context
-- Avoid ambiguity
-- Respect communication preferences
+### ABR-005: Resource management
 
-### AIS-002: Agent-to-Agent
+Agents MUST use resources responsibly.
 
-**Agent interactions must be coordinated and traceable.**
+Agents MUST:
+- clean up temporary resources they create
+- avoid resource exhaustion patterns
 
-Requirements:
-- Unique correlation IDs for workflows
-- Clear handoff protocols
-- Conflict resolution mechanisms
-- Deadlock prevention
+Agents SHOULD:
+- monitor and report resource usage when operating long-running tasks
 
-## Compliance Verification
+## Interaction standards (AIS)
 
-Organizations should verify agent behavior through:
+### AIS-001: Human communication
 
-1. **Automated Testing**: Unit and integration tests for behavioral compliance
-2. **Runtime Monitoring**: Continuous monitoring for violations
-3. **Periodic Audits**: Regular review of agent logs and actions
-4. **Incident Analysis**: Post-mortem review of behavioral issues
+When communicating with humans, agents MUST:
+- use clear language
+- provide sufficient context for review
+- avoid ambiguous instructions or claims
 
-## Next Steps
+### AIS-002: Agent-to-agent coordination
 
-Learn about [Human Oversight Standards](/docs/standards/human-oversight-standards).
+When agents coordinate, workflows MUST be traceable.
+
+Coordinated workflows MUST include:
+- a correlation/session identifier shared across actions
+- a clear handoff record between agents when responsibility changes
+
+## Evidence expectations
+
+To demonstrate conformance, an organization MUST be able to produce:
+- representative action logs showing ABR-001 fields
+- representative decision records for ABR-002 significant decisions
+- scope policy definitions mapped to agents (ABR-003)
+
+Operational verification methods are defined in:
+- **/docs/framework/behavior-verification**
