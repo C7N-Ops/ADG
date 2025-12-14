@@ -1,6 +1,8 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Agentic DevOps HQ',
@@ -11,8 +13,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://c7n-ops.github.io',
-  baseUrl: '/ADG/',
+  url: isProduction ? 'https://c7n-ops.github.io' : 'http://localhost:5000',
+  baseUrl: isProduction ? '/ADG/' : '/',
 
   organizationName: 'C7N-Ops',
   projectName: 'ADG',
