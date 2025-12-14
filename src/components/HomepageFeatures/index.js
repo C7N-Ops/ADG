@@ -11,7 +11,7 @@ const FeatureList = [
         Governance. Learn why governance matters in the age of autonomous AI agents.
       </>
     ),
-    link: '/docs/concepts/introduction',
+    link: '/docs/concepts/',
   },
   {
     title: 'ADG Standards',
@@ -21,7 +21,7 @@ const FeatureList = [
         oversight requirements, and compliance frameworks.
       </>
     ),
-    link: '/docs/standards/overview',
+    link: '/docs/standards/',
   },
   {
     title: 'ADG Framework',
@@ -31,7 +31,7 @@ const FeatureList = [
         practices, tooling recommendations, and step-by-step guides.
       </>
     ),
-    link: '/docs/framework/getting-started',
+    link: '/docs/framework/',
   },
 ];
 
