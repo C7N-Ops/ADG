@@ -11,8 +11,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://agenticdevopshq.com',
-  baseUrl: '/',
+  url: 'https://c7n-ops.github.io',
+  baseUrl: '/ADG/',
 
   organizationName: 'C7N-Ops',
   projectName: 'ADG',
