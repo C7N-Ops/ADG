@@ -19,6 +19,8 @@ Slowly.
 Carefully.  
 Predictably.
 
+<!-- truncate -->
+
 Even when we tried to accelerate development—through frameworks, IDEs, libraries, DevOps, and automation—there remained a comfort:
 
 - Humans wrote the code.  
