@@ -103,15 +103,15 @@ const config = {
             items: [
               {
                 label: 'ADG Concepts',
-                to: '/docs/concepts/introduction',
+                to: '/docs/concepts/',
               },
               {
                 label: 'ADG Standards',
-                to: '/docs/standards/overview',
+                to: '/docs/standards/',
               },
               {
                 label: 'ADG Framework',
-                to: '/docs/framework/getting-started',
+                to: '/docs/framework/',
               },
             ],
           },

@@ -17,4 +17,4 @@ Frameworks are procedural and include:
 
 1. **[ADG Implementation Quickstart](./implementation-quickstart.md)**
 2. **[Governance Controls Checklist](./governance-controls-checklist.md)**
-3. **[Case Studies Hub](./case-studies-hub.md)**
+3. **[Case Studies Hub](../concepts/case-studies-hub.md)**

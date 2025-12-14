@@ -19,4 +19,4 @@ Each case study SHOULD include:
 - ADG Prevention (which controls would have prevented or reduced impact)
 
 ## Next step
-Create a `/docs/frameworks/case-studies/` directory and publish each case as its own `.md` file, then link them here.
+Create a `/docs/concepts/case-studies/` directory and publish each case as its own `.md` file, then link them here.
