@@ -128,4 +128,4 @@ Organizations can pursue ADG certification to demonstrate:
 
 ## Next Steps
 
-Ready to implement? Start with the [ADG Framework](/docs/framework/getting-started).
+Ready to implement? Start with the [ADG Framework](/docs/framework/).

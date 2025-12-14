@@ -101,4 +101,4 @@ Organizations should verify agent behavior through:
 
 ## Next Steps
 
-Learn about [Human Oversight Standards](/docs/standards/human-oversight).
+Learn about [Human Oversight Standards](/docs/standards/human-oversight-standards).

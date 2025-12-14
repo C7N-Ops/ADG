@@ -28,9 +28,9 @@ ADG bridges this gap by providing:
 
 Whether you're just learning about agentic development or ready to implement governance in your organization, we have resources for you:
 
-- Start with [ADG Concepts](/docs/concepts/introduction) to understand the fundamentals
-- Review [ADG Standards](/docs/standards/overview) for formal specifications
-- Use the [ADG Framework](/docs/framework/getting-started) for practical implementation
+- Start with [ADG Concepts](/docs/concepts/) to understand the fundamentals
+- Review [ADG Standards](/docs/standards/) for formal specifications
+- Use the [ADG Framework](/docs/framework/) for practical implementation
 
 ## Join the Community
 
